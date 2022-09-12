@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Parcel Sandbox</title>
+    <meta charset="UTF-8" />
+  </head>
+
+  <body>
+    <div id="app"></div>
+    <canvas id="cnvs" width="400" height="400"></canvas>
+    <br />
+    <br />
+    <div>
+      <span>Start Offset: </span>
+      <input
+        type="range"
+        id="startOffsetInput"
+        step="0.25"
+        min="-200"
+        max="200"
+        value="-200"
+      />
+    </div>
+    <div>
+      <span>Character Spacing: </span>
+      <input
+        type="range"
+        id="charSpacingInput"
+        step="1000"
+        min="0"
+        max="3000"
+        value="0"
+      />
+    </div>
+
+    <script src="src/index.js"></script>
+    <script>
+      let can = document.getElementById("cnvs");
+      can.style.border = "1px solid";
+    </script>
+  </body>
+</html>
