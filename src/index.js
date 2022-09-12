@@ -1,3 +1,4 @@
+import "./styles.css";
 import { fabric } from "fabric";
 
 var canvas = new fabric.Canvas("cnvs");

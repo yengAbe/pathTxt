@@ -1,3 +1,4 @@
-body {
-  font-family: sans-serif;
+canvas {
+  border: 5px solid;
+  border-color: #999999;
 }
