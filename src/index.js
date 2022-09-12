@@ -10,7 +10,7 @@ var path = new fabric.Path("M 178,-6 a 178 178 -2 0 1 -356,0", {
   fill: "transparent",
   id: "path"
 });
-var itext = new fabric.Text("Hello", {
+var pathtext = new fabric.Text("Hello", {
   path: path,
   left: 20,
   top: 100,
@@ -24,22 +24,19 @@ var itext = new fabric.Text("Hello", {
   pathSide: "right",
   pathAlign: "center"
 });
-canvas.add(itext);
+canvas.add(pathtext);
+canvas.setActiveObject(pathtext);
 
 document
   .getElementById("startOffsetInput")
   .addEventListener("input", function () {
-    if (canvas.getActiveObject() != null) {
-      canvas.getActiveObject().set("pathStartOffset", Number(this.value));
-      canvas.renderAll();
-    }
+    pathtext.set("pathStartOffset", Number(this.value));
+    canvas.renderAll();
   });
 
 document
   .getElementById("charSpacingInput")
   .addEventListener("input", function () {
-    if (canvas.getActiveObject() != null) {
-      canvas.getActiveObject().set("charSpacing", Number(this.value));
-      canvas.renderAll();
-    }
+    pathtext.set("charSpacing", Number(this.value));
+    canvas.renderAll();
   });
